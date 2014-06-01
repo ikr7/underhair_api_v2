@@ -62,4 +62,5 @@ app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json)$/, function(req, res){
 
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
+
