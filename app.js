@@ -18,6 +18,11 @@ app.get('/', function(req, res){
 	return;
 });
 
+app.get('/favicon.ico', function(req, res){
+	res.writeHead(200, {'Content-Type': 'image/png'});
+	res.end(fs.readFileSync('./assets/favicon.ico'));
+});
+
 app.get('/v1', function(req, res){
 	res.redirect('/');
 });
@@ -63,4 +68,3 @@ app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json)$/, function(req, res){
 });
 
 app.listen(process.env.PORT || 3000);
-
