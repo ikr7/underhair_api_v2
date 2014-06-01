@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>陰毛 API</title>
+		<style>
+
+code{
+	font-family: 'Courier New';
+	display: block;
+	padding: 9px;
+	margin: 2px 0;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px
+}
+		</style>
+	</head>
+	<body>
+		<h1>陰毛 API</h1>
+		<p>陰毛っぽい画像を生成するAPIです。</p>
+		<p>PNG, JPEG, Animated GIF, SVG, JSON の出力に対応しています。</p>
+		<p>/v1/[数字]x[数字].[フォーマット] の形式でリクエストしてください。最大サイズは1024×1024(GIFのときは512×512)までに制限されています。フォーマットには png, jpg, jpeg, gif, svg, json のいずれかを指定して下さい。</p>
+		<h2>パラメータ</h2>
+		<dl>
+			<dt>amount</dt>
+			<dd>陰毛の本数を 0 - 1000 で指定します。デフォルト値は 15 です。1000 を超える値は指定できません。</dd>
+			<dt>curly</dt>
+			<dd>陰毛のチリチリ度合いを 0 - 360 で指定します。デフォルト値は 30 です。</dd>
+			<dt>length</dt>
+			<dd>陰毛のだいたいの長さを 0 - 100 で指定します。あくまでだいたいの長さです。デフォルト値は 100 です。</dd>
+			<dt>color</dt>
+			<dd>陰毛の色を CSS カラーで指定します。デフォルト値は "black" です。</dd>
+			<dt>bgcolor</dt>
+			<dd>背景色を CSS カラーで指定します。デフォルト値は "rgba(0,0,0,0)" です。</dd>
+		</dl>
+		<h2>使用例</h2>
+		<ul>
+			<li>
+				<a href='/v1/320x320.png'>320×320、PNG、完全にデフォルト</a>
+			</li>
+			<li>
+				<a href='/v1/320x320.png?amount=100&color=brown'>320×320、PNG、本数を100本に、色を茶色に</a>
+			</li>
+			<li>
+				<a href='/v1/640x320.jpg?bgcolor=bisque&curly=10'>640×320、JPEG、背景を肌色に、チリチリ度弱め</a>
+			</li>
+			<li>
+				<a href='/v1/160x160.gif?bgcolor=skyblue&color=forestgreen'>160×160、アニメGIF、背景を空色、色を緑に</a>
+			</li>
+			<li>
+				<a href='/v1/640x640.svg?color=rgba(0%2C0%2C255%2C0.5)'>640×640、SVG、色を半透過の青に</a>
+			</li>
+			<li>
+				<a href='/v1/320x320.png?amount=500&length=20'>320×320、PNG、短めの陰毛を500本</a>
+			</li>
+			<li>
+				<a href='/v1/100000x100000.png?amount=114514'>各パラメータで定められた範囲外の値を指定するとエラーになります</a>
+			</li>
+		</ul>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
