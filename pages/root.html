@@ -3,26 +3,10 @@
 	<head>
 		<meta charset='utf-8'>
 		<title>陰毛 API</title>
-		<style>
-
-code{
-	font-family: 'Courier New';
-	display: block;
-	padding: 9px;
-	margin: 2px 0;
-	font-size: 13px;
-	line-height: 1.42857143;
-	color: #333;
-	background-color: #f5f5f5;
-	border: 1px solid #ccc;
-	border-radius: 4px
-}
-		</style>
 	</head>
 	<body>
 		<h1>陰毛 API</h1>
-		<p>陰毛っぽい画像を生成するAPIです。</p>
-		<p>PNG, JPEG, Animated GIF, SVG, JSON の出力に対応しています。</p>
+		<p>陰毛っぽい画像を生成するAPIです。PNG, JPEG, Animated GIF, SVG, JSON の出力に対応しています。</p>
 		<p>/v1/[数字]x[数字].[フォーマット] の形式でリクエストしてください。最大サイズは1024×1024(GIFのときは512×512)までに制限されています。フォーマットには png, jpg, jpeg, gif, svg, json のいずれかを指定して下さい。</p>
 		<h2>パラメータ</h2>
 		<dl>
@@ -61,5 +45,10 @@ code{
 				<a href='/v1/100000x100000.png?amount=114514'>各パラメータで定められた範囲外の値を指定するとエラーになります</a>
 			</li>
 		</ul>
+		<p>
+			<a href='https://github.com/ikr7/underhair_api_v2'>ソースコード</a> / 
+			<a href='https://twitter.com/rfc4627'>作者</a> / 
+			<a href='https://github.com/ikr7/underhair_api_v2/issues/new'>要望・バグ報告などはこちらへ</a>
+		</p>
 	</body>
 </html>
