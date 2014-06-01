@@ -27,13 +27,13 @@ app.get('/v1', function(req, res){
 	res.redirect('/');
 });
 
-app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json)$/, function(req, res){
+app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json)$/i, function(req, res){
 	
 	var suffixIndex = req.path.lastIndexOf('.'), 
 		size = req.path.slice(req.path.lastIndexOf('/') + 1, suffixIndex).split('x');
 
 	var params = {
-		'type': req.path.substring(suffixIndex).slice(1), 
+		'type': req.path.substring(suffixIndex).slice(1).toLowerCase(), 
 		'width': size[0] ? parseInt(size[0]) : 320, 
 		'height': size[1] ? parseInt(size[1]) : 320, 
 		'amount': req.query.amount ? parseInt(req.query.amount) : 15, 
