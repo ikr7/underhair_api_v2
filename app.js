@@ -57,6 +57,7 @@ app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json)$/i, function(req, res){
 	generators[params.type](params, function(err, result){
 
 		res.writeHead(200, {
+			'Access-Control-Allow-Origin': '*', 
 			'Content-Length': result.data.length, 
 			'Content-Type': result.mime
 		});
