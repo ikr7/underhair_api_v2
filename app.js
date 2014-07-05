@@ -8,7 +8,8 @@ var express = require('express'),
 		'gif': require('./lib/generators/gif.js'), 
 		'svg': require('./lib/generators/svg.js'), 
 		'json': require('./lib/generators/json.js'), 
-		'pdf': require('./lib/generators/pdf.js')
+		'pdf': require('./lib/generators/pdf.js'), 
+		'msgpack': require('./lib/generators/msgpack.js')
 	};
 
 var app = express();
@@ -28,7 +29,7 @@ app.get('/v1', function(req, res){
 	res.redirect('/');
 });
 
-app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json|pdf)$/i, function(req, res){
+app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json|pdf|msgpack)$/i, function(req, res){
 	
 	var suffixIndex = req.path.lastIndexOf('.'), 
 		size = req.path.slice(req.path.lastIndexOf('/') + 1, suffixIndex).split('x');
