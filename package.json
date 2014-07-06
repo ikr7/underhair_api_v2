@@ -19,6 +19,7 @@
     "gifencoder": "^1.0.3",
     "node-raphael": "^0.2.0",
     "msgpack": "^0.2.3",
-    "xmlbuilder": "^2.2.1"
+    "xmlbuilder": "^2.2.1",
+    "js-yaml": "^3.0.2"
   }
 }
