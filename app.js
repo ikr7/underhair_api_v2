@@ -45,7 +45,8 @@ app.get(/^\/v1\/\d+x\d+\.(png|jpg|jpeg|gif|svg|json|pdf|msgpack|xml|yaml)$/i, fu
 		'bgcolor': req.query.bgcolor || 'rgba(0, 0, 0, 0)', 
 		'curly': req.query.curly ? parseInt(req.query.curly) : 30, 
 		'length': req.query.length ? parseInt(req.query.length) / 100 : 1, 
-		'callback': req.query.callback || null
+		'callback': req.query.callback || null, 
+		'startWidth': req.query.startWidth || null
 	};
 
 	if(
