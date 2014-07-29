@@ -11,7 +11,7 @@
     "inmou"
   ],
   "author": "ikr7",
-  "license": "WTFPL",
+  "license": "UHPL",
   "dependencies": {
     "express": "^4.4.0",
     "canvas": "^1.1.3",
